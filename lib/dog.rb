@@ -68,8 +68,9 @@ class Dog
     found = DB[:conn].execute(sql, name, breed).flatten
     if found == nil
       Dog.new(id: id, name: name, breed: breed)
-    else
+    elsif found[0] != nil
       Dog.find_by_id(found[0])
+    else Dog.create(id: nil, name: name, breed: breed)
     end
   end
 
