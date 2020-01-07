@@ -72,5 +72,5 @@ class Dog
       Dog.find_by_id(result[0])
     end
   end
-
+binding.pry
 end
