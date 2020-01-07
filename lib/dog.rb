@@ -51,4 +51,8 @@ class Dog
     DB[:conn].execute(sql, name, breed, id)
   end
 
+  def self.new_from_db
+
+  end
+
 end
