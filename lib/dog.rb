@@ -69,7 +69,7 @@ class Dog
     if result == nil
       Dog.new(id: id, name: name, breed: breed)
     else
-      result.find_by_id(result[0])
+      Dog.find_by_id(result[0])
     end
   end
 
