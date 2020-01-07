@@ -55,7 +55,7 @@ class Dog
     binding.pry
     id = row[0]
     name = row[1]
-    breed = [2]
+    breed = row[2]
     Dog.new(id: id, name: name ,breed: breed)
   end
 
