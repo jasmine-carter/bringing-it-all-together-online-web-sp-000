@@ -70,7 +70,6 @@ class Dog
       Dog.new(id: id, name: name, breed: breed)
     elsif self.id == nil
       self.save
-      self
     else
       Dog.find_by_id(result[0])
     end
