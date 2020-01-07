@@ -70,8 +70,7 @@ class Dog
       Dog.new(id: id, name: name, breed: breed)
     else
       Dog.find_by_id(result[0])
-    end
-    binding.pry
+    en
   end
 
 end
