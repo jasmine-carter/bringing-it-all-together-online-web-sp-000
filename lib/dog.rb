@@ -66,6 +66,7 @@ class Dog
       SELECT * FROM dogs WHERE name = ? OR breed = ?
     SQL
     result = DB[:conn].execute(sql, name, breed)
+    binding.pry
     if result = nil
       Dog.new(id: id, name: name, breed: breed)
     else
