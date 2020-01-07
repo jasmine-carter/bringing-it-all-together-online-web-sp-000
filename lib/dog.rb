@@ -32,7 +32,7 @@ class Dog
         INSERT INTO dogs (name, breed)
         VALUES (?, ?)
       SQL
-      new_dog = DB[:conn].execute(sql, name, breed)
+      new_dog = DB[:conn].execute(sql, self.name, self.breed)
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
       new_dog
     end
@@ -46,4 +46,5 @@ class Dog
 
   def self.update
   end
+  
 end
