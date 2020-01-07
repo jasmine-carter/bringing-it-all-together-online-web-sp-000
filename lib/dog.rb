@@ -65,6 +65,7 @@ class Dog
     sql = <<-SQL
       SELECT * FROM dogs WHERE name = ? AND breed = ? LIMIT 1
     SQL
+    binding.pry
     result = DB[:conn].execute(sql, name, breed).flatten
     if result == nil
       Dog.new(id: id, name: name, breed: breed)
