@@ -65,11 +65,11 @@ class Dog
     sql = <<-SQL
       SELECT * FROM dogs WHERE name = ? AND breed = ? LIMIT 1
     SQL
-    result = DB[:conn].execute(sql, name, breed).flatten
-    if result == nil
+    found = DB[:conn].execute(sql, name, breed).flatten
+    if found == nil
       Dog.new(id: id, name: name, breed: breed)
     else
-      Dog.find_by_id(result[0])
+      Dog.find_by_id(found[0])
     end
   end
 
