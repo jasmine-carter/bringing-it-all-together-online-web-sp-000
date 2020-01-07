@@ -41,10 +41,9 @@ class Dog
 
 
   def find_by_id
-
   end
 
   def self.update
   end
-  
+
 end
