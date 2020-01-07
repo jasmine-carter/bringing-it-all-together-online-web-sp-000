@@ -65,10 +65,10 @@ class Dog
     sql = <<-SQL
       SELECT * FROM dogs WHERE name = ? OR breed = ?
     SQL
-    result = DB[:conn].execute(sql, name, breed)
+    result = DB[:conn].execute(sql, name, breed).flatten
     binding.pry
-    if result = nil
-      Dog.new(id: id, name: name, breed: breed)
+    if result == nil
+      Dog.new(id: resultid, name: name, breed: breed)
     else
       result
     end
