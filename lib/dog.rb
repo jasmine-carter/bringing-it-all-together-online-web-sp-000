@@ -70,6 +70,7 @@ class Dog
       Dog.new(id: id, name: name, breed: breed)
     else
       result
+    end
   end
 
 end
