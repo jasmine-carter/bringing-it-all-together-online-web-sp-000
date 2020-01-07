@@ -38,7 +38,10 @@ class Dog
     end
   end
 
-
+  def self.create(id: nil, name:, breed:)
+    new_dog = Dog.initialize(id: nil, name:, breed:)
+    new_dog.save
+  end
 
   def find_by_id
   end
