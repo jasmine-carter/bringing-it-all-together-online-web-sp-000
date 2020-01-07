@@ -65,7 +65,11 @@ class Dog
     sql = <<-SQL
       SELECT * FROM dogs WHERE name = ? OR breed = ?
     SQL
-    DB[:conn].execute(sql, name, breed)
+    result = DB[:conn].execute(sql, name, breed)
+    if result = nil
+      Dog.new(id: id, name: name, breed: breed)
+    else
+      result
   end
 
 end
