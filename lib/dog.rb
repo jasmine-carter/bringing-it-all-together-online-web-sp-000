@@ -70,7 +70,8 @@ class Dog
       Dog.new(id: id, name: name, breed: breed)
     elsif found[0] != nil
       Dog.find_by_id(found[0])
-    else Dog.create(id: nil, name: name, breed: breed)
+    else new = Dog.create(id: nil, name: name, breed: breed)
+      new
     end
   end
 
