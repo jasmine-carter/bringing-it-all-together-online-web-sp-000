@@ -38,7 +38,7 @@ class Dog
     end
   end
 
-  
+
 
   def find_by_id
 
